@@ -1,0 +1,48 @@
+Average PM10 Levels = AVERAGE(global_air_quality_data_10000[PM10])
+Average SO2 Levels = AVERAGE(global_air_quality_data_10000[SO2])
+avg_pm2.5 = AVERAGE(global_air_quality_data_10000[PM2.5])
+AverageHumidity = AVERAGE('global_air_quality_data_10000'[Humidity])
+AverageTempeature = AVERAGE(global_air_quality_data_10000[Temperature])
+AverageWindSpeed = AVERAGE('global_air_quality_data_10000'[Wind Speed])
+City With Highest Average Humidity = 
+CALCULATE(
+    MAX('global_air_quality_data_10000'[City]),
+    FILTER(
+        'global_air_quality_data_10000',
+        'global_air_quality_data_10000'[Humidity] = CALCULATE(MAX('global_air_quality_data_10000'[Humidity]))
+    )
+)
+City With Lowest Average Temparutre = 
+CALCULATE(
+    MIN('global_air_quality_data_10000'[City]),
+    FILTER(
+        'global_air_quality_data_10000',
+        'global_air_quality_data_10000'[Temperature] = CALCULATE(MIN('global_air_quality_data_10000'[Temperature]))
+    )
+)
+
+Country With Highest Average Humidity = 
+CALCULATE(
+    MAX('global_air_quality_data_10000'[Country]),
+    FILTER(
+        'global_air_quality_data_10000',
+        'global_air_quality_data_10000'[Humidity] = CALCULATE(MAX('global_air_quality_data_10000'[Country]))
+    )
+)
+
+
+Date With Highest Windspeed = 
+CALCULATE(
+    MAX('global_air_quality_data_10000'[Date]),
+    FILTER(
+        'global_air_quality_data_10000',
+        'global_air_quality_data_10000'[Wind Speed] = CALCULATE(MAX('global_air_quality_data_10000'[Wind Speed]))
+    )
+)
+
+DaysWithHighTemperature = 
+CALCULATE(
+    COUNTROWS('global_air_quality_data_10000'),
+    'global_air_quality_data_10000'[Temperature] > 30  -- Replace 30 with your threshold
+)
+
