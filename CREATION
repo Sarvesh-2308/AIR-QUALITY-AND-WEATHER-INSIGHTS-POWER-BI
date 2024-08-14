@@ -1,0 +1,31 @@
+City: The name of the city where the air quality measurement was taken.
+Country: The country in which the city is located.
+Date: The date when the measurement was recorded.
+PM2.5: The concentration of fine particulate matter with a diameter of less than 2.5 micrometers (µg/m³).
+PM10: The concentration of particulate matter with a diameter of less than 10 micrometers (µg/m³).
+NO2: The concentration of nitrogen dioxide (µg/m³).
+SO2: The concentration of sulfur dioxide (µg/m³).
+CO: The concentration of carbon monoxide (mg/m³).
+O3: The concentration of ozone (µg/m³).
+Temperature: The temperature at the time of measurement (°C).
+Humidity: The humidity level at the time of measurement (%).
+Wind Speed: The wind speed at the time of measurement (m/s).
+
+
+
+Page 1: Overview
+
+Cards for key metrics (e.g., Average PM2.5, PM10)
+Bar chart showing average pollutant levels by city
+Gauge chart for real-time air quality index
+
+
+Page 2: Detailed Analysis
+Table with all measurements
+Line chart showing pollutant levels over time for selected cities
+Scatter plot comparing Temperature vs. Humidity
+
+Page 3: Trends
+Line charts showing trends of PM2.5, PM10, NO2, etc., over time
+Area chart showing changes in temperature and humidity
+Multi-row card for recent measurements
